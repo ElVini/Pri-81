@@ -15,14 +15,14 @@ Route::get('/', function () {
     return view('formulario');
 });
 
-Route::post('/save', 'paciente@store');
+Route::post('/save', 'Paciente@store');
 
 Route::get('/getConsultas', function() {
     return view('consultas');
 });
 
-Route::get('/getCitas', 'paciente@consultas');
+Route::get('/getCitas', 'Paciente@consultas');
 
-Route::get('/delCita/{idConsulta}', 'paciente@destroy');
+Route::get('/delCita/{idConsulta}', 'Paciente@destroy');
 
-Route::get('/editarCita/{idConsulta}', 'paciente@edit');
+Route::get('/editarCita/{idConsulta}', 'Paciente@edit');
