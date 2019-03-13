@@ -1,9 +1,10 @@
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 ## Importante
-Si hay problemas al ejecutar el servidor, aségurese de ejecutar "composer update".
-Las tablas en la base de datos se pueden crear directamente con el comando "php artisan migrate", para esto se requiere crear una base de datos y agregarla al archivo .env
-O, simplemente ejecutar el script "bd.sql" que está en este repositorio
+Si hay problemas al ejecutar el servidor, aségurese de ejecutar "composer update".<br/>
+Las tablas en la base de datos se pueden crear directamente con el comando "php artisan migrate", para esto se requiere crear una base de datos y agregarla al archivo .env<br/>
+O, simplemente ejecutar el script "bd.sql" que está en este repositorio.<br/>
+El repositorio se puede descargar desde el botón verde en la parte superior derecha.<br/>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
