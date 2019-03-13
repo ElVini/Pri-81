@@ -7,7 +7,7 @@
     <div class="container-fluid" ng-controller="ctrl">
         <div class="row">
             <div class="col-3" style="margin-top:20px;">
-                <a href="/" class="btn btn-link" style="width:100%;"><- Volver</a>
+                <a href="/" class="btn btn-secondary" style="width:100%;"><- Volver</a>
             </div>
             <div class="col-9"></div>
             <div class="col-12">
@@ -22,7 +22,6 @@
                         </tr>
                     </thead>
 
-
                     <tbody>
                         <tr ng-repeat="x in consultas">
                             <td> @{{ x.nombrePaciente }} @{{ x.apellidoPaciente }} </td>
@@ -32,10 +31,10 @@
                             <td>
                                 <div class="row">
                                     <div class="col-6">
-                                        <a href="/editarCita/@{{x.idConsulta}}" class="btn btn-success" style="width:100%;">Editar</a>
+                                        <a href="/editarCita/@{{x.idConsultas }}" class="btn btn-success" style="width:100%;">Editar</a>
                                     </div>
                                     <div class="col-6">
-                                        <a href="/delCita/@{{ x.idConsulta }}" class="btn btn-danger" style="width: 100%;">Eliminar</a>
+                                        <a href="/delCita/@{{ x.idConsultas }}" class="btn btn-danger" style="width: 100%;">Eliminar</a>
                                     </div>
                                 </div>
                             </td>

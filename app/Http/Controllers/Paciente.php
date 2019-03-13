@@ -68,7 +68,11 @@ class Paciente extends Controller
      */
     public function show($id)
     {
-        
+        $citas = new Cita();
+
+        $citas = $citas->where('idConsulta', '=', $id)->first();
+
+        return view('editar', $citas);   
     }
 
     /**
@@ -81,8 +85,8 @@ class Paciente extends Controller
     {
         $cita = new Cita();
 
-        $cita = $cita->where('idConsulta', '=', $id);
-        return $cita;
+        $cita = $cita->where('idConsultas', '=', $id)->first();
+        return view('editar',compact('cita'));
     }
 
     /**
@@ -94,7 +98,24 @@ class Paciente extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = new Cita();
+
+        if($data->where('horaConsulta', '=', $request->input('horaConsulta'))->where('diaConsulta', '=',  $request->input('diaConsulta'))->count() > 0) 
+        {
+            return 0;
+        }
+
+        if(Cita::where('idConsultas', '=', $id)->update([
+            'nombrePaciente'    => $request->input('nombrePaciente'),
+            'horaConsulta'      => $request->input('horaConsulta'),
+            'diaConsulta'       => $request->input('diaConsulta'),
+            'apellidoPaciente'  => $request->input('apellidoPaciente')
+        ])) {
+            return redirect('/getConsultas');
+        }
+        else return 0;
+        
+
     }
 
     /**
@@ -107,7 +128,7 @@ class Paciente extends Controller
     {
         $cita = new Cita();
 
-        $cita = $cita->where('idConsulta', '=', $idConsulta);
+        $cita = $cita->where('idConsultas', '=', $idConsulta);
         $cita->delete();//amosuna@upsin.edu.mx
         return redirect('/getConsultas');
     }

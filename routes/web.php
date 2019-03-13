@@ -26,3 +26,5 @@ Route::get('/getCitas', 'paciente@consultas');
 Route::get('/delCita/{idConsulta}', 'paciente@destroy');
 
 Route::get('/editarCita/{idConsulta}', 'paciente@edit');
+
+Route::post('/commitEdit/{idConsulta}', 'paciente@update')->name('commit');

@@ -4,13 +4,14 @@
     width: 100%;
 }
 
-.img-container > img {
+.img-container>img {
     display: block;
     margin: auto;
     width: 50%;
 }
 
-.menu-list, .submenu {
+.menu-list,
+.submenu {
     list-style: none;
     padding: 0 0 0 15px;
 }
@@ -20,20 +21,20 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.menu-list > li {
+.menu-list>li {
     border-bottom: 1px solid white;
     margin-bottom: 20px;
     font-weight: bold;
     position: relative;
 }
 
-.menu-list > li:hover {
+.menu-list>li:hover {
     cursor: default;
 }
 
-.menu-list > li:hover .submenu, 
-.menu-list > li:focus .submenu, 
-.menu-list > li:focus-within .submenu{
+.menu-list>li:hover .submenu,
+.menu-list>li:focus .submenu,
+.menu-list>li:focus-within .submenu {
     display: block;
     z-index: 1;
 }
@@ -47,13 +48,13 @@
     transition: display 1s ease;
 }
 
-.submenu > li > a {
+.submenu>li>a {
     text-decoration: none;
     color: white;
     padding: 0;
 }
 
-.submenu > li > a:hover {
+.submenu>li>a:hover {
     color: #DDD7FF;
     text-decoration: none;
 }
@@ -89,12 +90,12 @@
 }
 
 #main-content {
-    margin-top: 20px;   
+    margin-top: 20px;
 }
 
 .form-container {
     transition: opacity linear 1s;
-    margin-top: 20px !important; 
+    margin-top: 20px !important;
     background: #F2F2F2;
     width: 95%;
     margin: auto;
@@ -104,7 +105,7 @@
 
 .table-container {
     transition: 1s ease opacity;
-    margin-top: 20px !important; 
+    margin-top: 20px !important;
     width: 95%;
     margin: auto;
     padding: 20px;
@@ -163,4 +164,11 @@ button.inside {
     position: absolute;
     top: 0;
     right: 0;
+}
+
+.error-msg {
+    font-family: 'Nunito', sans-serif;
+    font-size: .7em;
+    font-weight: bold;
+    color: #D00F02;
 }

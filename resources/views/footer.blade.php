@@ -1,9 +1,12 @@
 @section('footer')
 
 <script src="{{ asset('js/angular.js') }}"></script>
-</body>
-</html>
+
 <script>
     var app = angular.module('app', []);
 </script>
+
+<script src="{{ asset('js/main-script.js') }}"></script>
+</body>
+</html>
 @show
